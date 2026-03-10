@@ -22,13 +22,13 @@ export function Home() {
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <div className="backdrop-blur-sm bg-white/5 rounded-3xl p-8 md:p-12 border border-white/10 shadow-2xl">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Global Logistics,
+              Trucks & Haulage,
               <br />
               <span className="text-blue-300">Delivered with Precision</span>
             </h1>
             <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Connect your business to the world with our comprehensive logistics solutions.
-              Fast, reliable, and secure shipping across 150+ countries.
+              Your trusted partner in road freight, haulage, and end-to-end logistics.
+              Reliable trucks, experienced drivers, and nationwide coverage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/book">
@@ -48,10 +48,10 @@ export function Home() {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-12">
             {[
-              { value: "150+", label: "Countries Served" },
-              { value: "1M+", label: "Shipments/Year" },
+              { value: "500+", label: "Trucks in Fleet" },
+              { value: "50K+", label: "Deliveries/Year" },
               { value: "99.8%", label: "On-Time Delivery" },
-              { value: "24/7", label: "Customer Support" },
+              { value: "24/7", label: "Dispatch Support" },
             ].map((stat, index) => (
               <div key={index} className="backdrop-blur-md bg-white/10 rounded-xl p-6 border border-white/20">
                 <div className="text-3xl md:text-4xl font-bold text-white mb-1">{stat.value}</div>
@@ -70,35 +70,47 @@ export function Home() {
               Our Services
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Comprehensive logistics solutions tailored to your business needs
+              End-to-end trucks and haulage solutions tailored to your business needs
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                icon: Plane,
-                title: "Air Freight",
-                description: "Fast and reliable air cargo services for urgent shipments worldwide",
+                icon: Truck,
+                title: "Full Truckload (FTL)",
+                description: "Dedicated trucks for large shipments — direct door-to-door delivery with no stops",
                 color: "from-blue-500 to-blue-600",
               },
               {
-                icon: Ship,
-                title: "Ocean Freight",
-                description: "Cost-effective sea freight solutions for bulk and container shipping",
+                icon: Package,
+                title: "Less Than Truckload (LTL)",
+                description: "Cost-effective shared truck space for smaller freight that doesn't fill a full trailer",
                 color: "from-cyan-500 to-cyan-600",
               },
               {
-                icon: Truck,
-                title: "Ground Transport",
-                description: "Flexible ground transportation for domestic and cross-border delivery",
+                icon: Ship,
+                title: "Container Haulage",
+                description: "Port-to-warehouse container transport with reliable pickup and delivery schedules",
                 color: "from-indigo-500 to-indigo-600",
               },
               {
-                icon: Package,
-                title: "Warehousing",
-                description: "Secure storage and distribution with advanced inventory management",
+                icon: MapPin,
+                title: "Last Mile Delivery",
+                description: "Final leg delivery to your customer's doorstep — fast, tracked, and reliable",
                 color: "from-purple-500 to-purple-600",
+              },
+              {
+                icon: Globe,
+                title: "Cross-Border Haulage",
+                description: "Seamless overland freight across borders with customs clearance support",
+                color: "from-orange-500 to-orange-600",
+              },
+              {
+                icon: Clock,
+                title: "Express & Same-Day",
+                description: "Urgent deliveries with dedicated vehicles dispatched within hours",
+                color: "from-red-500 to-red-600",
               },
             ].map((service, index) => (
               <Card key={index} className="group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
@@ -130,30 +142,30 @@ export function Home() {
                 Why Choose M.S Logistics?
               </h2>
               <p className="text-xl text-gray-600 mb-8">
-                We combine cutting-edge technology with decades of expertise to deliver exceptional logistics services.
+                We combine a modern fleet with experienced drivers and smart logistics technology to keep your freight moving.
               </p>
 
               <div className="space-y-6">
                 {[
                   {
                     icon: Shield,
-                    title: "Secure & Reliable",
-                    description: "Advanced security measures and insurance coverage for all shipments",
+                    title: "Secure & Insured",
+                    description: "Full cargo insurance and GPS-tracked vehicles for every load",
                   },
                   {
                     icon: Clock,
-                    title: "Real-Time Tracking",
-                    description: "Monitor your shipments 24/7 with our advanced tracking system",
+                    title: "Real-Time Fleet Tracking",
+                    description: "Monitor your truck and cargo live with our driver tracking system",
                   },
                   {
-                    icon: Globe,
-                    title: "Global Network",
-                    description: "Extensive network of partners and facilities across 150+ countries",
+                    icon: Truck,
+                    title: "Modern Fleet",
+                    description: "Well-maintained trucks ranging from 1-ton to 34-ton capacity",
                   },
                   {
                     icon: TrendingUp,
-                    title: "Cost Optimization",
-                    description: "Smart routing and consolidation to reduce shipping costs",
+                    title: "Route Optimization",
+                    description: "Smart routing to reduce transit times and fuel costs",
                   },
                 ].map((feature, index) => (
                   <div key={index} className="flex items-start space-x-4 p-6 rounded-xl backdrop-blur-sm bg-gray-50/80 hover:bg-blue-50/80 transition-colors border border-gray-200/50">
@@ -199,18 +211,18 @@ export function Home() {
             {[
               {
                 icon: Users,
-                title: "Trusted by 10,000+ Companies",
-                description: "From startups to Fortune 500 companies",
+                title: "Trusted by 5,000+ Businesses",
+                description: "From local retailers to major distributors",
               },
               {
                 icon: MapPin,
-                title: "Global Coverage",
-                description: "500+ locations in 150+ countries",
+                title: "Nationwide Coverage",
+                description: "Servicing all major routes and regions",
               },
               {
                 icon: Award,
-                title: "Award-Winning Service",
-                description: "Recognized industry leader since 2001",
+                title: "Industry Leaders Since 2001",
+                description: "25+ years of haulage excellence",
               },
             ].map((item, index) => (
               <div key={index} className="text-center backdrop-blur-sm bg-white/10 rounded-2xl p-8 border border-white/20">
@@ -232,7 +244,7 @@ export function Home() {
             Ready to Ship with M.S Logistics?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Get a free quote today and experience the difference of working with a trusted logistics partner.
+            Get a free quote today and experience reliable trucks and haulage you can count on.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/book">

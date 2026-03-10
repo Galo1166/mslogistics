@@ -66,11 +66,12 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li className="hover:text-white transition-colors cursor-pointer">Air Freight</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Ocean Freight</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Ground Transport</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Warehousing</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Express Delivery</li>
+              <li className="hover:text-white transition-colors cursor-pointer">Full Truckload (FTL)</li>
+              <li className="hover:text-white transition-colors cursor-pointer">Less Than Truckload (LTL)</li>
+              <li className="hover:text-white transition-colors cursor-pointer">Container Haulage</li>
+              <li className="hover:text-white transition-colors cursor-pointer">Last Mile Delivery</li>
+              <li className="hover:text-white transition-colors cursor-pointer">Cross-Border Haulage</li>
+              <li className="hover:text-white transition-colors cursor-pointer">Express & Same-Day</li>
             </ul>
           </div>
 

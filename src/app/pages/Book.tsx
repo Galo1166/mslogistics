@@ -41,10 +41,12 @@ export function Book() {
   const calculateEstimate = (data: typeof formData) => {
     const weight = parseFloat(data.weight) || 0;
     const baseRates: Record<string, number> = {
-      air: 8.5,
-      ocean: 2.5,
-      ground: 1.8,
-      express: 15.0,
+      ftl: 3.5,
+      ltl: 2.0,
+      haulage: 4.0,
+      lastmile: 1.5,
+      crossborder: 5.0,
+      express: 8.0,
     };
     
     const rate = baseRates[data.serviceType] || 0;
@@ -76,7 +78,7 @@ export function Book() {
             </p>
             <div className="bg-blue-50 rounded-lg p-6 my-6">
               <p className="text-sm text-gray-600 mb-2">Booking Reference</p>
-              <p className="text-2xl font-bold text-blue-600">GF-{Math.random().toString(36).substr(2, 9).toUpperCase()}</p>
+              <p className="text-2xl font-bold text-blue-600">MS-{Math.random().toString(36).substr(2, 9).toUpperCase()}</p>
             </div>
             <p className="text-gray-600 mb-8">
               We've sent a confirmation email to <span className="font-semibold">{formData.contactEmail}</span> with your booking details and tracking information.
@@ -134,10 +136,12 @@ export function Book() {
                       <SelectValue placeholder="Select service" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="air">Air Freight</SelectItem>
-                      <SelectItem value="ocean">Ocean Freight</SelectItem>
-                      <SelectItem value="ground">Ground Transport</SelectItem>
-                      <SelectItem value="express">Express Delivery</SelectItem>
+                      <SelectItem value="ftl">Full Truckload (FTL)</SelectItem>
+                      <SelectItem value="ltl">Less Than Truckload (LTL)</SelectItem>
+                      <SelectItem value="haulage">Container Haulage</SelectItem>
+                      <SelectItem value="lastmile">Last Mile Delivery</SelectItem>
+                      <SelectItem value="crossborder">Cross-Border Haulage</SelectItem>
+                      <SelectItem value="express">Express & Same-Day</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
