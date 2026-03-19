@@ -19,9 +19,7 @@ export function Header() {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2 group">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-700 p-2.5 rounded-lg shadow-lg group-hover:shadow-xl transition-shadow">
-                <Package className="w-6 h-6 text-white" />
-              </div>
+              <img src="/mslogo.png" alt="M.S Logistics Logo" className="w-12 h-12" />
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-gray-900">M.S Logistics</span>
               </div>
